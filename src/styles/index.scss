@@ -18,9 +18,6 @@ body {
   height: 80vmin;
   border: 1vmin dotted $color-border;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   &__hand {
     position: absolute;
@@ -33,7 +30,7 @@ body {
     width: 3vmin;
     height: 20vmin;
     background-color: $color-minute;
-    margin-left: -1.8vmin;
+    margin-left: -1.5vmin;
     z-index: 1;
     animation: rotate-minute 60 min steps(60) infinite;
   }
@@ -42,17 +39,20 @@ body {
     width: 1.5vmin;
     height: 38vmin;
     background-color: $color-second;
-    margin-left: -0.9vmin;
+    margin-left: -0.75vmin;
     z-index: 2;
     animation: rotate-second 60s linear infinite;
   }
 
   &__center {
     position: absolute;
+    top: 50%;
+    left: 50%;
     width: 5vmin;
     height: 5vmin;
     background-color: $color-center;
     border-radius: 50%;
+    transform: translate(-50%, -50%);
     z-index: 3;
   }
 
